@@ -1,0 +1,100 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host:
+    database_port:
+    database_name:
+    database_user:
+    database_password:
+    mailer_transport: smtp
+    mailer_host: #smtp.sendgrid.net
+    mailer_user:
+    mailer_password:
+    secret: 'tobechanged'
+
+    # Global parameters
+    app_name: 'Strime.io API - Test'
+    app_version: '1.0'
+    hostname: 'api-dev.company.com'
+    storage_multiplier: 1000000000
+    user_days_to_confirm_email: 4
+    strime_api_url: https://api-dev.company.com/
+    strime_api_token:
+    strime_rights: 'image,audio'
+
+    # Encoding API parameters
+    strime_encoding_api_url: 'https://encoding-dev.company.com/'
+    strime_encoding_api_token:
+    strime_encoding_api_max_running_jobs: 2
+    strime_encoding_api_delay_before_restarting_job: 30
+    strime_encoding_servers_list: 'encoding1.company.com,encoding2.company.com,encoding3.company.com'
+
+    # Mail notifications parameters
+    strime_mail_notifications_delay: 14400 # 4h
+    strime_mail_instant_notifications_delay: 300 #7min
+
+    # App Parameters
+    strime_app_url: https://www-dev.company.com/
+    strime_app_nginx_username: htpwdcred
+    strime_app_nginx_pwd: htpwdpwd
+    strime_app_token:
+
+    # Mailchimp
+    mailchimp_clients_list: ''
+
+    # AWS (Amazon Web Service)
+    aws_key: ''
+    aws_secret: ''
+    aws_region: 'eu-west-1'
+    aws_bucket: 'your-bucket'
+    aws_bucket_comments: 'your-bucket'
+    aws_bucket_images: 'your-bucket'
+    aws_bucket_audios: 'your-bucket'
+
+    # FFMPEG
+    ffmpeg_ffmpeg_path: '/usr/bin/ffmpeg'
+    ffmpeg_ffprobe_path: '/usr/bin/ffprobe'
+    ffmpeg_timeout: 3600
+    ffmpeg_threads: 1
+    ffmpeg_video_width: 1280
+    ffmpeg_video_height: 720
+
+    # Default content
+    default_project_title_fr: "Testez Strime"
+    default_project_title_en: "Test Strime"
+    default_project_title_es: "Prueba Strime"
+    default_video_1_title_fr: "Démo 1"
+    default_video_2_title_fr: "Démo 2"
+    default_video_1_title_en: "Demo 1"
+    default_video_2_title_en: "Demo 2"
+    default_video_1_title_es: "Demostración 1"
+    default_video_2_title_es: "Demostración 2"
+    default_content_comment_1:
+        time: 7.268652
+        comment_fr: "Auriez-vous un plan où on ne voit pas la marque du moniteur ?"
+        comment_en: "Do you have any sequence in which we don't see the brand of the screen?"
+        comment_es: "¿Tiene un plan en el que no se ve la marca del monitor?"
+        area: "29.5754-66.8157"
+    default_content_comment_2:
+        time: 20.437879
+        comment_fr: "Couper le plan avant le mouvement un peu brusque."
+        comment_en: "Cut the sequence before the sudden movement."
+        comment_es: "Cortar el plan antes el movimiento un poco brusco."
+        area: "40.41-57.6923"
+    default_content_comment_3:
+        time: 6.118351
+        comment_fr: "Ce plan donne l'impression d'être un peu flou, peut-on le changer ?"
+        comment_en: "This plan gives the impression of being a little vague, can it be changed?"
+        comment_es: "Este plan da la impresión de ser un poco borrosa, podemos cambiarlo?"
+        area: "24.451-42.6655"
+    default_content_comment_4:
+        time: 11.83747
+        comment_fr: "Ce n'est pas la bonne marque, flouter svp."
+        comment_en: "This is not the right brand, add blur please."
+        comment_es: "Esta no es la marca adecuada, por favor, hacerla borrosa."
+        area: "66.0322-81.2165"
+    default_content_comment_5:
+        time: 18.055636
+        comment_fr: "Est-ce que l'on pourrait essayer de mettre cette image au ralenti ?"
+        comment_en: "Could we try to slow down this image?"
+        comment_es: "Le podríamos tratar de poner esta imagen en cámara lenta?"
+        area: "66.1786-57.7818"

@@ -1,0 +1,39 @@
+strime_api_global:
+    resource: "@StrimeAPIGlobalBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+strime_api_user:
+    resource: "@StrimeAPIUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+strime_api_video:
+    resource: "@StrimeAPIVideoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+strime_api_stats:
+    resource: "@StrimeAPIStatsBundle/Controller/"
+    type:     annotation
+    prefix:   /stats
+
+strime_api_image:
+    resource: "@StrimeAPIImageBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+strime_api_audio:
+    resource: "@StrimeAPIAudioBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+remove_trailing_slash:
+    path: /{url}
+    defaults: { _controller: StrimeAPIGlobalBundle:Redirecting:removeTrailingSlash }
+    requirements:
+        url: .*/$
+    methods: [GET]
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"

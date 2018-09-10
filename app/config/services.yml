@@ -1,0 +1,41 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    strime_api.helpers.video_action:
+        class: StrimeAPI\VideoBundle\Helpers\VideoAction
+        arguments: ['@doctrine.orm.entity_manager', '@service_container']
+    strime_api.helpers.comment_action:
+        class: StrimeAPI\VideoBundle\Helpers\CommentAction
+        arguments: ['@doctrine.orm.entity_manager', '@service_container']
+    strime_api.helpers.image_action:
+        class: StrimeAPI\ImageBundle\Helpers\ImageAction
+        arguments: ['@doctrine.orm.entity_manager', '@service_container']
+    strime_api.helpers.audio_action:
+        class: StrimeAPI\AudioBundle\Helpers\AudioAction
+        arguments: ['@doctrine.orm.entity_manager', '@service_container']
+    strime_api.helpers.project_action:
+        class: StrimeAPI\VideoBundle\Helpers\ProjectAction
+        arguments: ['@doctrine.orm.entity_manager', '@service_container', '@doctrine']
+    strime_api.helpers.load_balancing:
+        class: StrimeAPI\VideoBundle\Helpers\LoadBalancing
+        arguments: ['@doctrine.orm.entity_manager', '@service_container']
+    strime_api.helpers.avatar_helper:
+        class: StrimeAPI\UserBundle\Helpers\AvatarHelper
+        arguments: ['@doctrine.orm.entity_manager']
+    strime_api.helpers.user_helper:
+        class: StrimeAPI\UserBundle\Helpers\UserHelper
+        arguments: ['@doctrine.orm.entity_manager', '@service_container']
+    app.tokens.action_listener:
+        class: StrimeAPI\GlobalBundle\EventListener\TokenListener
+        arguments: [ '@service_container' ]
+        tags:
+            - { name: kernel.event_listener, event: kernel.controller, method: onKernelController }
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse }
+    app.tokens.exception_listener:
+        class: StrimeAPI\GlobalBundle\EventListener\ExceptionListener
+        arguments: [ '@service_container' ]
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }
